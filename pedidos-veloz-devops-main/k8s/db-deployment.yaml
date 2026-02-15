@@ -23,7 +23,6 @@ spec:
               key: password
         ports:
         - containerPort: 5432
-        # Requisito de Resiliência [cite: 109]
         livenessProbe:
           exec:
             command: ["pg_isready", "-U", "postgres"]
